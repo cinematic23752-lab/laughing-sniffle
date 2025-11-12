@@ -1,0 +1,5 @@
+{
+  "name": "Personal Automated Crypto Trading System",
+  "description": "A locally-running application to manage automated cryptocurrency trading bots for platforms like Binance and Gemini. This system allows you to create, manage, and monitor trading bots implementing various strategies like DCA, Grid Trading, and Trailing Stops, all from your own computer.",
+  "requestFramePermissions": []
+}
