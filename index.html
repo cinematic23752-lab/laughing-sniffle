@@ -1,96 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Automated Crypto Trading System</title>
+    <title>تطبيق التداول بالذكاء الاصطناعي</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        darkMode: 'class', // Enable class-based dark mode
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'Tajawal', 'sans-serif'],
-            },
-            colors: {
-              'gray-900': '#121826',
-              'gray-800': '#1A2233',
-              'gray-700': '#2A3447',
-              'gray-600': '#4D586F',
-              'gray-100': '#f3f4f6',
-              'gray-200': '#e5e7eb',
-              'cyan': {
-                '400': '#22d3ee',
-                '500': '#06b6d4',
-                '600': '#0891b2',
-              }
-            }
-          }
-        }
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4f7f9;
+        color: #1f2937;
       }
-    </script>
-    <script>
-        const setDocumentDirection = () => {
-            const lang = localStorage.getItem('language') || 'en';
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        };
-
-        // Immediately apply theme and direction from localStorage to prevent FOUC
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-        setDocumentDirection();
-    </script>
-<style>
-    @keyframes flash-green {
-        0% { background-color: rgba(74, 222, 128, 0.3); }
-        100% { background-color: transparent; }
-    }
-    .flash-green {
-        animation: flash-green 1.5s ease-out;
-    }
-
-    @keyframes flash-red {
-        0% { background-color: rgba(248, 113, 113, 0.3); }
-        100% { background-color: transparent; }
-    }
-    .flash-red {
-        animation: flash-red 1.5s ease-out;
-    }
-
-    @keyframes flash-blue {
-        0% { background-color: rgba(59, 130, 246, 0.25); }
-        100% { background-color: transparent; }
-    }
-    .flash-blue {
-        animation: flash-blue 1.5s ease-out;
-    }
-</style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
-    "ccxt": "https://unpkg.com/ccxt@4.5.18/dist/ccxt.browser.mjs"
-  }
-}
-</script>
-<!-- TradingView Widget Script -->
-<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 antialiased transition-colors duration-300 font-sans">
+    </style>
+  </head>
+  <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/src/index.tsx"></script> 
+  </body>
 </html>
